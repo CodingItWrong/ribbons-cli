@@ -1,3 +1,3 @@
 export default {
-  apiDriver: 'fake',
+  apiDriver: 'remote',
 };
