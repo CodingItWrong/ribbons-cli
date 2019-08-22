@@ -1,38 +1,38 @@
-import Reactotron from 'reactotron-react-native'
-import React, { Component } from 'react'
-import { Modal, View } from 'react-native'
-import { observer } from 'mobx-react'
-import StartReading from '../../StartReading'
-import Multiple from './Multiple'
-import { statusBarMargin, verticalFill } from '../../styles'
-import chapterCompletionStore from '../../store/chapterCompletionStore'
+import Reactotron from 'reactotron-react-native';
+import React, {Component} from 'react';
+import {Modal, View} from 'react-native';
+import {observer} from 'mobx-react';
+import StartReading from '../../StartReading';
+import Multiple from './Multiple';
+import {statusBarMargin, verticalFill} from '../../styles';
+import chapterCompletionStore from '../../store/chapterCompletionStore';
 
 class MultipleWrapper extends Component {
   state = {
     modalVisible: false,
-  }
+  };
 
   showStartABookModal = () => {
-    this.setState({ modalVisible: true })
-  }
+    this.setState({modalVisible: true});
+  };
 
   handleStartReading = () => {
-    this.setState({ modalVisible: false })
-    this.props.onReadingUpdate()
-  }
+    this.setState({modalVisible: false});
+    this.props.onReadingUpdate();
+  };
 
   handleCancelStartReading = () => {
-    this.setState({ modalVisible: false })
-  }
+    this.setState({modalVisible: false});
+  };
 
   render() {
-    const { readings, books } = this.props
-    const { modalVisible } = this.state
+    const {readings, books} = this.props;
+    const {modalVisible} = this.state;
 
     return (
       <View style={verticalFill}>
         <Modal visible={modalVisible}>
-          <View style={[statusBarMargin, { flex: 1 }]}>
+          <View style={[statusBarMargin, {flex: 1}]}>
             <StartReading
               onChooseBook={this.handleStartReading}
               onCancel={this.handleCancelStartReading}
@@ -47,16 +47,16 @@ class MultipleWrapper extends Component {
           onReadingCompleted={this.markReadingCompleted}
         />
       </View>
-    )
+    );
   }
 
-  markChapterRead = ({ reading, chapter }) => {
-    const { onReadingUpdate } = this.props
+  markChapterRead = ({reading, chapter}) => {
+    const {onReadingUpdate} = this.props;
 
     this.setState({
       saving: true,
       error: false,
-    })
+    });
 
     chapterCompletionStore
       .create({
@@ -76,25 +76,25 @@ class MultipleWrapper extends Component {
         this.setState({
           saving: false,
           error: false,
-        })
-        onReadingUpdate()
+        });
+        onReadingUpdate();
       })
       .catch(error => {
-        Reactotron.log(error)
+        Reactotron.log(error);
         this.setState({
           saving: false,
           error: true,
-        })
-      })
-  }
+        });
+      });
+  };
 
-  markReadingCompleted = ({ reading }) => {
-    const { onReadingUpdate } = this.props
+  markReadingCompleted = ({reading}) => {
+    const {onReadingUpdate} = this.props;
 
     this.setState({
       saving: true,
       error: false,
-    })
+    });
 
     reading
       .update({
@@ -106,17 +106,17 @@ class MultipleWrapper extends Component {
         this.setState({
           saving: false,
           error: false,
-        })
-        onReadingUpdate()
+        });
+        onReadingUpdate();
       })
       .catch(error => {
-        Reactotron.log(error)
+        Reactotron.log(error);
         this.setState({
           saving: false,
           error: true,
-        })
-      })
-  }
+        });
+      });
+  };
 }
 
-export default observer(MultipleWrapper)
+export default observer(MultipleWrapper);

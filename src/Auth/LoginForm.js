@@ -1,16 +1,10 @@
-import React from 'react'
-import { View } from 'react-native'
-import { Input } from 'react-native-elements'
-import PrimaryButton from '../PrimaryButton'
-import Error from '../Error'
+import React from 'react';
+import {View} from 'react-native';
+import {Input} from 'react-native-elements';
+import PrimaryButton from '../PrimaryButton';
+import Error from '../Error';
 
-const LoginForm = ({
-  username,
-  password,
-  error,
-  handleChange,
-  handleLogIn,
-}) => (
+const LoginForm = ({username, password, error, handleChange, handleLogIn}) => (
   <View>
     <Error style={styles.error} message={error} />
     <Input
@@ -33,7 +27,7 @@ const LoginForm = ({
     />
     <PrimaryButton testID="logIn" title="Log In" onPress={handleLogIn} />
   </View>
-)
+);
 
 const styles = {
   error: {
@@ -41,6 +35,6 @@ const styles = {
     marginRight: 16,
     marginTop: 16,
   },
-}
+};
 
-export default LoginForm
+export default LoginForm;

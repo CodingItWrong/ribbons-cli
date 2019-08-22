@@ -1,17 +1,17 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+import {Text, View} from 'react-native';
 
-const Error = ({ style: styleProp, message }) =>
+const Error = ({style: styleProp, message}) =>
   message ? (
     <View style={[styles.container, styleProp]}>
       <Text style={styles.text}>{message}</Text>
     </View>
-  ) : null
+  ) : null;
 
 const colors = {
   darkRed: '#600',
   lightRed: '#FCC',
-}
+};
 
 const styles = {
   container: {
@@ -24,6 +24,6 @@ const styles = {
   text: {
     color: colors.darkRed,
   },
-}
+};
 
-export default Error
+export default Error;

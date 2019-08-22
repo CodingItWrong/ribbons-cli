@@ -1,10 +1,10 @@
-import React from 'react'
-import { View } from 'react-native'
-import { Text } from 'react-native-elements'
-import PrimaryButton from '../../PrimaryButton'
-import { verticallyCentered, centered } from '../../styles'
+import React from 'react';
+import {View} from 'react-native';
+import {Text} from 'react-native-elements';
+import PrimaryButton from '../../PrimaryButton';
+import {verticallyCentered, centered} from '../../styles';
 
-const NotStarted = ({ onStartBook }) => (
+const NotStarted = ({onStartBook}) => (
   <View style={verticallyCentered}>
     <Text style={centered}>You aren't reading a book right now.</Text>
     <Text h2 style={centered}>
@@ -16,6 +16,6 @@ const NotStarted = ({ onStartBook }) => (
       onPress={onStartBook}
     />
   </View>
-)
+);
 
-export default NotStarted
+export default NotStarted;

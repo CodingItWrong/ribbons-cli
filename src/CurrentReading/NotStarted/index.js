@@ -1,27 +1,27 @@
-import React, { Component } from 'react'
-import { Modal, View } from 'react-native'
-import NotStarted from './NotStarted'
-import StartReading from '../../StartReading'
-import { verticalFill, statusBarMargin } from '../../styles'
+import React, {Component} from 'react';
+import {Modal, View} from 'react-native';
+import NotStarted from './NotStarted';
+import StartReading from '../../StartReading';
+import {verticalFill, statusBarMargin} from '../../styles';
 
 export default class NotStartedWrapper extends Component {
-  state = { modalVisible: false }
+  state = {modalVisible: false};
 
   showStartABookModal = () => {
-    this.setState({ modalVisible: true })
-  }
+    this.setState({modalVisible: true});
+  };
 
   handleStartReading = () => {
-    this.setState({ modalVisible: false })
-    this.props.onReadingUpdate()
-  }
+    this.setState({modalVisible: false});
+    this.props.onReadingUpdate();
+  };
 
   handleCancelStartReading = () => {
-    this.setState({ modalVisible: false })
-  }
+    this.setState({modalVisible: false});
+  };
 
   render() {
-    const { modalVisible } = this.state
+    const {modalVisible} = this.state;
 
     return (
       <View style={verticalFill}>
@@ -35,6 +35,6 @@ export default class NotStartedWrapper extends Component {
         </Modal>
         <NotStarted onStartBook={this.showStartABookModal} />
       </View>
-    )
+    );
   }
 }
