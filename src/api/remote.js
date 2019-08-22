@@ -1,12 +1,10 @@
 import axios from 'axios';
 import {AsyncStorage} from 'react-native';
 
-const isProd = false; // need to make this dynamic
-
 const tokenStorageKey = 'bible-reading:token';
-const baseURL = isProd
-  ? 'https://api.biblereading.need-bee.com'
-  : 'http://localhost:3000';
+const baseURL = __DEV__
+  ? 'http://localhost:3000'
+  : 'https://api.biblereading.need-bee.com';
 
 const api = axios.create({
   baseURL,
