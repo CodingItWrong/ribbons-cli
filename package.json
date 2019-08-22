@@ -8,13 +8,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@codingitwrong/react-login": "^0.0.3",
     "@reststate/mobx": "^0.0.7",
     "axios": "^0.19.0",
+    "date-fns": "^2.0.0",
     "mobx": "^5.13.0",
     "mobx-react": "^6.1.3",
     "react": "16.8.6",
     "react-native": "0.60.5",
+    "react-native-elements": "^1.1.0",
     "react-native-gesture-handler": "^1.4.0",
+    "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^3.11.1"
   },
   "devDependencies": {
@@ -35,6 +39,14 @@
     "preset": "react-native"
   },
   "detox": {
-    "test-runner": "jest"
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Ribbons.app",
+        "build": "xcodebuild -workspace ios/Ribbons.xcworkspace -scheme Ribbons -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 8"
+      }
+    }
   }
 }

@@ -1,21 +1,23 @@
-import Reactotron from 'reactotron-react-native'
-import env from '../../env'
-import fake from './fake'
-import remote from './remote'
+import Reactotron from 'reactotron-react-native';
+import env from '../../env';
+import fake from './fake';
+import remote from './remote';
 
-let api
+let api;
+
+const {apiDriver} = env;
 
 setTimeout(() => {
-  Reactotron.log(`apiDriver: ${env.apiDriver}`)
-}, 0)
+  Reactotron.log(`apiDriver: ${apiDriver}`);
+}, 0);
 
-switch (env.apiDriver) {
+switch (apiDriver) {
   case 'fake':
-    api = fake
-    break
+    api = fake;
+    break;
   case 'remote':
-    api = remote
-    break
+    api = remote;
+    break;
 }
 
-export default api
+export default api;
