@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import readingStore from '../store/readingStore';
@@ -39,6 +38,8 @@ class CurrentReading extends Component {
     try {
       await this.refreshReading();
       const readings = readingStore.where(currentlyReading);
+
+      // eslint-disable-next-line no-unused-vars
       for (const reading of readings) {
         const {id} = reading.relationships.book.data;
         await bookStore.loadById({id});
@@ -85,7 +86,7 @@ class CurrentReading extends Component {
     return (
       <View style={verticalFill}>
         {this.renderContent()}
-        <Text style={[centered, {marginTop: 20}]}>
+        <Text style={[centered, styles.marginTop]}>
           Chapters read today: {numChaptersToday}
         </Text>
       </View>
@@ -118,5 +119,11 @@ class CurrentReading extends Component {
     }
   }
 }
+
+const styles = {
+  marginTop: {
+    marginTop: 20,
+  },
+};
 
 export default observer(CurrentReading);

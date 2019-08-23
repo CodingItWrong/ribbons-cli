@@ -32,7 +32,7 @@ class MultipleWrapper extends Component {
     return (
       <View style={verticalFill}>
         <Modal visible={modalVisible}>
-          <View style={[statusBarMargin, {flex: 1}]}>
+          <View style={[statusBarMargin, styles.fill]}>
             <StartReading
               onChooseBook={this.handleStartReading}
               onCancel={this.handleCancelStartReading}
@@ -118,5 +118,11 @@ class MultipleWrapper extends Component {
       });
   };
 }
+
+const styles = {
+  fill: {
+    flex: 1,
+  },
+};
 
 export default observer(MultipleWrapper);
