@@ -16,6 +16,7 @@ class Auth extends Component {
     const token = await api.loadToken();
     const initiallyLoggedIn = !!token;
 
+    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       loading: false,
       initiallyLoggedIn,

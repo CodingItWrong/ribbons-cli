@@ -26,7 +26,7 @@ export default class Multiple extends Component {
   renderReading = ({item: reading}) => {
     const {books} = this.props;
     const bookId = reading.relationships.book.data.id;
-    const book = books.find(book => book.id === bookId);
+    const book = books.find(testBook => testBook.id === bookId);
     const bookNameForChapter =
       book.attributes.singularName || book.attributes.name;
 

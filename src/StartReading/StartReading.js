@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import React, {Component} from 'react';
 import {parseISO, formatDistance} from 'date-fns';
 import {FlatList, View} from 'react-native';

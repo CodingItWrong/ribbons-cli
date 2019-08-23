@@ -13,7 +13,7 @@ class InProgress extends Component {
 
     const reading = readings[0];
     const bookId = reading.relationships.book.data.id;
-    const book = books.find(book => book.id === bookId);
+    const book = books.find(testBook => testBook.id === bookId);
 
     const {furthestReadChapter} = reading.attributes;
     const nextChapter = furthestReadChapter + 1;
