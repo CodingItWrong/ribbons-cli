@@ -6,7 +6,6 @@ An app for tracking Bible reading progress
 
 - [Yarn](https://yarnpkg.com/en/docs/install)
 - [React Native CLI](https://facebook.github.io/react-native/docs/getting-started)
-- [Reactotron](https://github.com/infinitered/reactotron/blob/master/docs/installing.md)
 - [Detox](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)
 
 ## Installation

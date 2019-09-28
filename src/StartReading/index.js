@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import StartReading from './StartReading';
@@ -14,7 +13,7 @@ class StartReadingWrapper extends Component {
     try {
       await bookStore.loadAll();
     } catch (e) {
-      Reactotron.error(e);
+      console.error(e);
     }
   };
 
