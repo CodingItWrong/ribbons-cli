@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import React, {Component} from 'react';
 import {Modal, View} from 'react-native';
 import {observer} from 'mobx-react';
@@ -80,7 +79,7 @@ class MultipleWrapper extends Component {
         onReadingUpdate();
       })
       .catch(error => {
-        Reactotron.log(error);
+        console.error(error);
         this.setState({
           saving: false,
           error: true,
@@ -110,7 +109,7 @@ class MultipleWrapper extends Component {
         onReadingUpdate();
       })
       .catch(error => {
-        Reactotron.log(error);
+        console.error(error);
         this.setState({
           saving: false,
           error: true,

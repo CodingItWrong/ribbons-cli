@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import env from '../../env';
 import fake from './fake';
 import remote from './remote';
@@ -8,7 +7,7 @@ let api;
 const {apiDriver} = env;
 
 setTimeout(() => {
-  Reactotron.log(`apiDriver: ${apiDriver}`);
+  console.log(`apiDriver: ${apiDriver}`);
 }, 0);
 
 switch (apiDriver) {

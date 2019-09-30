@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import React, {Component} from 'react';
 import {Linking, TouchableHighlight, View} from 'react-native';
 import {Text} from 'react-native-elements';
@@ -9,7 +8,7 @@ import {centered} from '../../styles';
 class InProgress extends Component {
   render() {
     const {readings, books, onChapterRead} = this.props;
-    Reactotron.log({readings, books});
+    console.log({readings, books});
 
     const reading = readings[0];
     const bookId = reading.relationships.book.data.id;

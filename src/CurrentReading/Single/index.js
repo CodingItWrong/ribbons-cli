@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import React, {Component} from 'react';
 import {Modal, View} from 'react-native';
 import {observer} from 'mobx-react';
@@ -35,7 +34,7 @@ class Single extends Component {
     const reading = readings[0];
     const {id} = reading.relationships.book.data;
     const book = bookStore.byId({id});
-    Reactotron.log({id, book});
+    console.log({id, book});
 
     if (reading.attributes.furthestReadChapter >= book.attributes.numChapters) {
       return (
@@ -103,7 +102,7 @@ class Single extends Component {
         onReadingUpdate();
       })
       .catch(error => {
-        Reactotron.log(error);
+        console.error(error);
         this.setState({
           saving: false,
           error: true,
@@ -133,7 +132,7 @@ class Single extends Component {
         onReadingUpdate();
       })
       .catch(error => {
-        Reactotron.log(error);
+        console.error(error);
         this.setState({
           saving: false,
           error: true,

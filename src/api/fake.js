@@ -1,4 +1,3 @@
-import Reactotron from 'reactotron-react-native';
 import books from './mocks/books';
 
 let readingStarted = false;
@@ -30,7 +29,7 @@ const reading = () => ({
 
 const api = {
   get(url) {
-    Reactotron.log({url});
+    console.log({url});
 
     if (url.match(/^books/)) {
       return response(books);
@@ -46,7 +45,7 @@ const api = {
   },
 
   post(url) {
-    Reactotron.log({url});
+    console.log({url});
 
     if (url.match(/^\/oauth\/token/)) {
       return Promise.resolve({
@@ -67,7 +66,7 @@ const api = {
   },
 
   patch(url) {
-    Reactotron.log({url});
+    console.log({url});
 
     readingCompleted = true;
     return response(reading());
