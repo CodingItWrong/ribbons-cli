@@ -1,14 +1,11 @@
-import env from '../../env';
+import env from 'react-native-config';
 import fake from './fake';
 import remote from './remote';
 
 let api;
 
-const {apiDriver} = env;
-
-setTimeout(() => {
-  console.log(`apiDriver: ${apiDriver}`);
-}, 0);
+const apiDriver = env.API_DRIVER;
+console.log(`env: ${JSON.stringify(env)}`);
 
 switch (apiDriver) {
   case 'fake':
