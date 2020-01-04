@@ -51,7 +51,7 @@
       },
       "ios.sim.release": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Ribbons.app",
-        "build": "ENVFILE=.env.detox xcodebuild -workspace ios/Ribbons.xcworkspace -scheme Ribbons -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "build": "ENVFILE=.env.detox xcodebuild -workspace ios/Ribbons.xcworkspace -scheme Ribbons -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "device": {
           "type": "iPhone 11 Pro"
