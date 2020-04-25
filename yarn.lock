@@ -2870,10 +2870,10 @@ detect-newline@^3.0.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
-detox@^16.0.2:
-  version "16.0.2"
-  resolved "https://registry.yarnpkg.com/detox/-/detox-16.0.2.tgz#b355de3533affcadc93d72f691131db683186415"
-  integrity sha512-SJNlHItoylT3FevMta0wsxS4r3wyTCvPuRrV1QYjEWlygpeJupSzhka312hlzGy5a5w6c+a4NeNj7JSEsQ2J1g==
+detox@^16.2.1:
+  version "16.2.1"
+  resolved "https://registry.yarnpkg.com/detox/-/detox-16.2.1.tgz#6b739e8a9de7118b3123e1dd96597b6119618cc7"
+  integrity sha512-9ZLqGEC71DQbwU9At2bW35Y3zegYV9DRsG7BD7sOMKqg1rXUgWEW+2nKiTk25j6XuB7SpNDj9QGbE9pWP2mrDA==
   dependencies:
     "@babel/core" "^7.4.5"
     bunyan "^1.8.12"
@@ -5673,12 +5673,7 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@^1.1.1, minimist@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
-  integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
-
-minimist@^1.2.5:
+minimist@^1.1.1, minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
