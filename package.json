@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@codingitwrong/react-login": "^0.0.3",
-    "@react-native-community/async-storage": "^1.9.0",
+    "@react-native-community/async-storage": "^1.11.0",
     "@reststate/mobx": "^0.0.7",
     "axios": "^0.19.2",
     "date-fns": "^2.14.0",
